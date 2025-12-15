@@ -1,13 +1,20 @@
 package com.aspringsj;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
 
+@Entity
 public class SoftwareEngineer {
-
-    String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer ID;
+    String name;
     List<String> techStack;
 
     public SoftwareEngineer() {
